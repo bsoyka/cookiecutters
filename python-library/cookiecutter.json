@@ -2,6 +2,7 @@
   "full_name": "Ben Soyka",
   "email": "hello@bsoyka.me",
   "github_username": "bsoyka",
+  "copyright_holder": "Benjamin Soyka",
   "project_name": "Python Package",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "module_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
