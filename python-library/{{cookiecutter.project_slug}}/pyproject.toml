@@ -86,3 +86,6 @@ flake8-tidy-imports.ban-relative-imports = "all"
     "PLR2004", # Checks for "magic" values.
     "S101",    # Checks for the use of assert statements.
 ]
+
+[tool.mypy]
+strict = true
