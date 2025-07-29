@@ -1,0 +1,12 @@
+{
+  "full_name": "Ben Soyka",
+  "email": "hello@bsoyka.me",
+  "github_username": "bsoyka",
+  "project_name": "Python Package",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "module_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
+  "description": "A library that does something useful.",
+  "readme_oneliner": "**{{ cookiecutter.project_name }}** is a Python library that does something useful.",
+  "first_version": "0.1.0",
+  "__gh_slug": "{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+}
