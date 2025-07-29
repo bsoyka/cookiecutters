@@ -48,3 +48,13 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "{{cookiecutter.module_name}}"
 module-root = "src"
+
+[tool.poe.tasks]
+_deptry = "deptry ."
+_format = "ruff format"
+_lint = "ruff check --fix"
+_types = "mypy ."
+bump = "bump-my-version bump"
+pc = "pre-commit run --all-files"
+ruff = ["_lint", "_format"]
+check = ["ruff", "_types", "_deptry"]
