@@ -26,14 +26,21 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "bump-my-version>=1.2.1",
-    "deptry>=0.23.0",
-    "mypy>=1.17.0",
-    "poethepoet>=0.36.0",
-    "pre-commit>=4.2.0",
-    "pytest>=8.4.1",
-    "pytest-cov>=6.2.1",
-    "ruff>=0.12.4",
+    "bump-my-version",
+    "pre-commit",
+    "ruff",
+    "tox",
+    "tox-uv",
+]
+gha-update = [
+    "gha-update ; python_full_version >= '3.12'",
+]
+tests = [
+    "pytest",
+    "pytest-cov",
+]
+typing = [
+    "mypy",
 ]
 
 [project.urls]
@@ -45,19 +52,12 @@ issues = "https://github.com/{{__gh_slug}}/issues"
 requires = ["uv_build>=0.8.3,<0.9.0"]
 build-backend = "uv_build"
 
+[tool.uv]
+default-groups = ["dev", "tests", "typing"]
+
 [tool.uv.build-backend]
 module-name = "{{cookiecutter.module_name}}"
 module-root = "src"
-
-[tool.poe.tasks]
-_deptry = "deptry ."
-_format = "ruff format"
-_lint = "ruff check --fix"
-_types = "mypy ."
-bump = "bump-my-version bump"
-pc = "pre-commit run --all-files"
-ruff = ["_lint", "_format"]
-check = ["ruff", "_types", "_deptry"]
 
 [tool.ruff]
 preview = true
@@ -111,3 +111,53 @@ commit_args = ""
 setup_hooks = []
 pre_commit_hooks = ["uv lock --upgrade-package {{cookiecutter.project_slug}}", "git add uv.lock"]
 post_commit_hooks = []
+
+[tool.tox]
+env_list = [
+    "py3.13", "py3.12", "py3.11", "py3.10", "py3.9",
+    "style",
+    "typing",
+]
+
+[tool.tox.env_run_base]
+description = "run tests with pytest"
+runner = "uv-venv-lock-runner"
+package = "wheel"
+wheel_build_env = ".pkg"
+constrain_package_deps = true
+use_frozen_constraints = true
+dependency_groups = ["tests"]
+commands = [["pytest", {replace = "posargs", default = [], extend = true}]]
+
+[tool.tox.env.style]
+description = "run all pre-commit hooks on all files"
+dependency_groups = ["dev"]
+skip_install = true
+commands = [["pre-commit", "run", "--all-files"]]
+
+[tool.tox.env.typing]
+description = "run static type checkers"
+dependency_groups = ["typing"]
+commands = [["mypy", {replace = "posargs", default = ["."], extend = true}]]
+
+[tool.tox.env.update-actions]
+description = "update GitHub Actions pins"
+labels = ["update"]
+dependency_groups = ["gha-update"]
+skip_install = true
+commands = [["gha-update"]]
+
+[tool.tox.env.update-pre_commit]
+description = "update pre-commit pins"
+labels = ["update"]
+dependency_groups = ["dev"]
+skip_install = true
+commands = [["pre-commit", "autoupdate", "--freeze", "-j4"]]
+
+[tool.tox.env.update-requirements]
+description = "update uv lock"
+labels = ["update"]
+dependency_groups = []
+no_default_groups = true
+skip_install = true
+commands = [["uv", "lock", {replace = "posargs", default = ["-U"], extend = true}]]
