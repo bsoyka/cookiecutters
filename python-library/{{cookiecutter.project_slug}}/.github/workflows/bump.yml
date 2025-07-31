@@ -19,6 +19,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Bump version
         uses: callowayproject/bump-my-version@574c65d01d92f35f58294e9e9296811d75410401 # v1.2.1
