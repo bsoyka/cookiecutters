@@ -1,0 +1,9 @@
+{
+    "templates": {
+        "python-library": {
+            "path": "./python-library",
+            "title": "Python Library",
+            "description": "A published library on PyPI"
+        }
+    }
+}
