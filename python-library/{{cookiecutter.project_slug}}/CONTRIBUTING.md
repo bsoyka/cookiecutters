@@ -1,0 +1,122 @@
+# Contributing to {{ cookiecutter.project_name }}
+
+Thank you for taking the time to contribute! Open-source projects are powered by and for
+the community, and your help is always greatly appreciated.
+
+All types of contributions are encouraged and valued—no matter how small or large.
+
+## Social and financial support
+
+If you like this project but don't have time to contribute in other ways, you can still
+help out! Here are just a few ideas:
+
+- Star the repository on GitHub.
+- Discuss {{ cookiecutter.project_name }} out in the real world.
+- Refer to this project in your readme.
+- Sign up for [thanks.dev](https://thanks.dev/home) to automatically spread financial
+  support to the open-source maintainers you rely on. (
+  See [my profile](https://thanks.dev/u/gh/bsoyka)!)
+- Financially support my work directly
+  via [GitHub Sponsors](https://github.com/sponsors/bsoyka).
+
+## Ground rules
+
+This project is governed
+by [a code of conduct](https://github.com/bsoyka/policy/blob/main/code-of-conduct.md).
+By participating in this project and its associated community spaces, you are expected
+to uphold this code. Please follow the process described in that document to report any
+potential violations.
+
+## Before you start
+
+Before you start contributing, ensure you have the following:
+
+- A computer
+- A strong internet connection
+- A [GitHub](https://github.com/) account
+
+Additionally, if you're interested in contributing code, you'll need a few other things:
+
+- [Git](https://git-scm.com/) and some of the basic knowledge to use it
+- [uv](https://docs.astral.sh/uv/), the package and project manager this project is
+  built with
+
+There
+are [many ways to do install uv](https://docs.astral.sh/uv/getting-started/installation/)
+depending on your system setup and preferred package manager. If you're using macOS or
+Linux, the following command will generally work:
+
+```shell
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+> [!NOTE]
+> uv takes care of installing and running all the other tools used in this project. If
+> you'd like, you can choose to install some of them separately,
+> like [Ruff](https://docs.astral.sh/ruff/), [pre-commit](https://pre-commit.ci/),
+> and [tox](https://tox.wiki/en/latest/config.html), but you don't need to, as you can
+> run
+> all of these through uv.
+
+## Contributing code
+
+[//]: # (TODO)
+
+### Tooling overview
+
+Here's a quick look at the tools used behind the scenes of this project! Assuming you
+set up uv correctly, these commands should just work, with no manual installation steps
+necessary.
+
+If this looks like a lot, don't worry—all of these tools also run automatically on
+GitHub when you submit a pull request. While running these checks before you commit your
+changes is helpful, it's not an absolute requirement as we can work through any fixes
+together later.
+
+> [!TIP]
+> Many of these tools have multiple ways to run them. Use whichever one you'd like—each
+> method listed for a tool should do the same thing.
+
+| Tool       | What it does                                                   | How to use it                                                                                                                                                                                                                              |
+|------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ruff       | Python linting and formatting                                  | <ul><li>By itself: `uv run ruff check --fix && uv run ruff format`</li> <li>Through pre-commit</li> <li>Through tox (runs all pre-commit hooks): `uv run tox -e style`</li></ul>                                                           |
+| pre-commit | Automated checks before you commit                             | <ul><li>Set up automated runs before you commit: `uv run pre-commit install`</li> <li>Run manually only on changed files: `uv run pre-commit run`</li> <li>Run on all files: `uv run pre-commit run -a` or `uv run tox -e style`</li></ul> |
+| pytest     | Unit testing                                                   | <ul><li>Run only on one Python version: `uv run pytest`</li> <li>Across all supported Python versions (through tox): `uv run tox`</li></ul>                                                                                                |
+| mypy       | Static type checking                                           | <ul><li>By itself: `uv run mypy .`</li> <li>Through tox: `uv run tox -e typing`</li></ul>                                                                                                                                                  |
+| tox        | Testing automation across multiple Python virtual environments | *See instructions for each tool above.*                                                                                                                                                                                                    |
+
+### Code style
+
+In general, don't worry too much about code style rules. Automation can take care of
+most of the little things—if the tools listed above like your code, I probably do too.
+
+If you really must know what code should look like in this project, we generally follow
+the [Black style](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html),
+as [implemented by Ruff](https://docs.astral.sh/ruff/formatter/#philosophy). An exception is that we prefer single quotes (`''` rather than `""`), but this is also handled by our Ruff configuration. Let Ruff do its thing!
+
+For docstrings, [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) is preferred. See existing documentation in the codebase for examples!
+
+Additionally, the [Zen of Python](https://peps.python.org/pep-0020/) (PEP 20) by Tim Peters is recommended reading:
+> Beautiful is better than ugly.  
+> Explicit is better than implicit.  
+> Simple is better than complex.  
+> Complex is better than complicated.  
+> Flat is better than nested.  
+> Sparse is better than dense.  
+> Readability counts.  
+> Special cases aren't special enough to break the rules.  
+> Although practicality beats purity.  
+> Errors should never pass silently.  
+> Unless explicitly silenced.  
+> In the face of ambiguity, refuse the temptation to guess.  
+> There should be one-- and preferably only one --obvious way to do it.  
+> Although that way may not be obvious at first unless you're Dutch.  
+> Now is better than never.  
+> Although never is often better than *right* now.  
+> If the implementation is hard to explain, it's a bad idea.  
+> If the implementation is easy to explain, it may be a good idea.  
+> Namespaces are one honking great idea—let's do more of those!
+
+### Code contribution process
+
+[//]: # (TODO)
