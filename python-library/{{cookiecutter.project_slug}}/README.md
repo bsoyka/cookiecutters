@@ -35,7 +35,7 @@ $ pip install {{cookiecutter.project_slug}}
 [codecov]: https://codecov.io/github/{{cookiecutter.__gh_slug}}
 
 [//]: # (TODO: Add documentation link)
-[docs]: 
+[docs]:
 
 [github]: https://github.com/{{cookiecutter.__gh_slug}}
 [license]: https://github.com/{{cookiecutter.__gh_slug}}/blob/master/LICENSE

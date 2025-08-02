@@ -15,6 +15,9 @@ repos:
       - id: forbid-submodules
       - id: name-tests-test
       - id: trailing-whitespace
+        args: [
+          --markdown-linebreak-ext=md
+        ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: 4cbc74d53fe5634e58e0e65db7d28939c9cec3f7  # frozen: v0.12.7
     hooks:
