@@ -41,6 +41,9 @@ dev = [
     "tox",
     "tox-uv",
 ]
+docs = [
+    "sphinx",
+]
 gha-update = [
     "gha-update ; python_full_version >= '3.12'",
 ]
@@ -95,6 +98,9 @@ flake8-tidy-imports.ban-relative-imports = "all"
     "PLR2004", # Checks for "magic" values.
     "S101",    # Checks for the use of assert statements.
 ]
+"docs/conf.py" = [
+    "INP",     # Checks for packages missing an __init__.py file.
+]
 
 [tool.mypy]
 strict = true
@@ -126,6 +132,11 @@ commands = [["pre-commit", "run", "--all-files"]]
 description = "run static type checkers"
 dependency_groups = ["typing"]
 commands = [["mypy", {replace = "posargs", default = ["."], extend = true}]]
+
+[tool.tox.env.docs]
+description = "build documentation"
+dependency_groups = ["docs"]
+commands = [["sphinx-build", "-b", "html", "docs", "docs/_build"]]
 
 [tool.tox.env.update-actions]
 description = "update GitHub Actions pins"
