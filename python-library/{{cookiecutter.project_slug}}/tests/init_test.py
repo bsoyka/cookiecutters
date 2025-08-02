@@ -2,14 +2,18 @@
 
 from pathlib import Path
 
-import toml
-
 from {{cookiecutter.module_name}} import __version__
+
+try:
+    import tomllib  # type: ignore[import-not-found]
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 
 def test_version() -> None:
     """Test that the package version matches the pyproject.toml."""
     pyproject_path = Path(__file__).parent.parent / 'pyproject.toml'
-    pyproject = toml.load(pyproject_path)
+    with pyproject_path.open('rb') as file:
+        pyproject = tomllib.load(file)
 
     assert __version__ == pyproject['project']['version']

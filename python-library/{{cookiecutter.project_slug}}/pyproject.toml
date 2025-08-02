@@ -50,11 +50,12 @@ gha-update = [
 tests = [
     "pytest",
     "pytest-cov",
-    "toml",
+    "tomli >= 1.1.0 ; python_version < '3.11'",
 ]
 typing = [
     "mypy",
     "pytest",
+    "tomli",
 ]
 
 [project.urls]
