@@ -146,5 +146,5 @@ within a few days after submitting a pull request), please email hello@bsoyka.me
 [uv]: https://docs.astral.sh/uv/
 [uv-install]: https://docs.astral.sh/uv/getting-started/installation/
 
-[issues]: https://github.com/{{ cookiecutter.__gh_slug }}/issues
-[issues-new]: https://github.com/{{ cookiecutter.__gh_slug }}/issues/new
+[issues]: https://github.com/{{cookiecutter.__gh_slug}}/issues
+[issues-new]: https://github.com/{{cookiecutter.__gh_slug}}/issues/new
