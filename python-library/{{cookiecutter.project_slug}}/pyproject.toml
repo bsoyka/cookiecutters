@@ -54,7 +54,7 @@ tests = [
 ]
 typing = [
     "mypy",
-    "types-toml",
+    "pytest",
 ]
 
 [project.urls]
