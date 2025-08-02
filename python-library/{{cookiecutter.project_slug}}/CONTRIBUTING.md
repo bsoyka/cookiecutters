@@ -92,11 +92,16 @@ most of the little things—if the tools listed above like your code, I probably
 
 If you really must know what code should look like in this project, we generally follow
 the [Black style](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html),
-as [implemented by Ruff](https://docs.astral.sh/ruff/formatter/#philosophy). An exception is that we prefer single quotes (`''` rather than `""`), but this is also handled by our Ruff configuration. Let Ruff do its thing!
+as [implemented by Ruff](https://docs.astral.sh/ruff/formatter/#philosophy). An
+exception is that we prefer single quotes (`''` rather than `""`), but this is also
+handled by our Ruff configuration. Let Ruff do its thing!
 
-For docstrings, [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) is preferred. See existing documentation in the codebase for examples!
+For
+docstrings, [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+is preferred. See existing documentation in the codebase for examples!
 
-Additionally, the [Zen of Python](https://peps.python.org/pep-0020/) (PEP 20) by Tim Peters is recommended reading:
+Additionally, the [Zen of Python](https://peps.python.org/pep-0020/) (PEP 20) by Tim
+Peters is recommended reading:
 > Beautiful is better than ugly.  
 > Explicit is better than implicit.  
 > Simple is better than complex.  
@@ -119,4 +124,28 @@ Additionally, the [Zen of Python](https://peps.python.org/pep-0020/) (PEP 20) by
 
 ### Code contribution process
 
-[//]: # (TODO)
+Follow the
+standard [fork-and-branch workflow](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/)
+for an idea of how to contribute to this and other open-source projects. Generally, this
+involves a few steps:
+
+1. [Fork and clone](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+   the {{ cookiecutter.__gh_slug }} repository to make a copy you can edit. I also
+   recommend making a new branch on your fork for your changes.
+2. Make your changes, testing along the way
+   using [this project's tools](#tooling-overview).
+3. In most cases, you should add or edit unit tests that automatically check the
+   functionality you're adding or changing. See existing test cases for examples, or ask
+   for help when you submit your changes!
+4. [Commit](https://training.github.com/downloads/github-git-cheat-sheet/#make-changes)
+   your changes
+   and [push](https://training.github.com/downloads/github-git-cheat-sheet/#synchronize-changes)
+   them to GitHub.
+5. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+   to propose that your changes be merged into the main repository.
+6. Wait for a review and respond to any comments or requested changes.
+7. Take a deep breath and pat yourself on the back. Once your pull request is approved
+   and merged, I'll take care of the rest. Thank you for your contributions!
+
+If you have any questions throughout the contribution process (or you don't hear from me
+within a few days after submitting a pull request), please email hello@bsoyka.me.
