@@ -36,7 +36,6 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "bump-my-version",
     "pre-commit",
     "ruff",
     "tox",
@@ -99,28 +98,6 @@ flake8-tidy-imports.ban-relative-imports = "all"
 
 [tool.mypy]
 strict = true
-
-[tool.bumpversion]
-current_version = "{{cookiecutter.first_version}}"
-parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
-serialize = ["{major}.{minor}.{patch}"]
-search = "{current_version}"
-replace = "{new_version}"
-regex = false
-ignore_missing_version = false
-ignore_missing_files = false
-tag = true
-sign_tags = false
-tag_name = "v{new_version}"
-tag_message = "chore: bump {current_version} → {new_version}"
-allow_dirty = false
-commit = true
-message = "chore: bump {current_version} → {new_version}"
-moveable_tags = []
-commit_args = ""
-setup_hooks = []
-pre_commit_hooks = ["uv lock --upgrade-package {{cookiecutter.project_slug}}", "git add uv.lock"]
-post_commit_hooks = []
 
 [tool.tox]
 env_list = [
