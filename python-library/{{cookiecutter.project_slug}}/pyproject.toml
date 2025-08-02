@@ -50,6 +50,7 @@ gha-update = [
 tests = [
     "pytest",
     "pytest-cov",
+    "toml",
 ]
 typing = [
     "mypy",
