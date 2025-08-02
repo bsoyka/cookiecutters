@@ -36,16 +36,16 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "pre-commit",
-    "ruff",
-    "tox",
-    "tox-uv",
+    "pre-commit >= 3.2.0",
+    "ruff >= 0.12.0",
+    "tox >= 4.24.1",
+    "tox-uv >= 1.21.0",
 ]
 docs = [
     "sphinx",
 ]
 gha-update = [
-    "gha-update ; python_full_version >= '3.12'",
+    "gha-update",
 ]
 tests = [
     "pytest",
@@ -64,7 +64,7 @@ documentation = "" # TODO: Add documentation link
 sponsor = "https://github.com/sponsors/{{cookiecutter.github_username}}"
 
 [build-system]
-requires = ["uv_build>=0.8.3,<0.9.0"]
+requires = ["uv_build>=0.7.19,<0.9.0"]
 build-backend = "uv_build"
 
 [tool.uv]
