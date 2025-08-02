@@ -60,7 +60,11 @@ $ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ## Contributing code
 
-[//]: # (TODO)
+At the core of any Python library is its code, and {{ cookiecutter.project_name }} is no
+different. Take a look at [existing issues](https://github.com/{{ cookiecutter.__gh_slug }}/issues)
+to see if there's something you'd like to work on,
+or [open a new issue](https://github.com/{{ cookiecutter.__gh_slug }}/issues/new)
+if you have another idea!
 
 ### Tooling overview
 
