@@ -13,12 +13,15 @@ help out! Here are just a few ideas:
 - Star the repository on GitHub.
 - Discuss {{ cookiecutter.project_name }} out in the real world.
 - Refer to this project in your readme.
-- Sign up for [thanks.dev][thanks] to automatically spread financial support to the open-source maintainers you rely on. (See [my profile][thanks-me]!)
+- Sign up for [thanks.dev][thanks] to automatically spread financial support to the
+  open-source maintainers you rely on. (See [my profile][thanks-me]!)
 - Financially support my work directly via [GitHub Sponsors][sponsor].
 
 ## Ground rules
 
-This project is governed by [a code of conduct][conduct]. By participating in this project and its associated community spaces, you are expected to uphold this code. Please follow the process described in that document to report any potential violations.
+This project is governed by [a code of conduct][conduct]. By participating in this
+project and its associated community spaces, you are expected to uphold this code.
+Please follow the process described in that document to report any potential violations.
 
 ## Before you start
 
@@ -33,7 +36,9 @@ Additionally, if you're interested in contributing code, you'll need a few other
 - [Git][git] and some of the basic knowledge to use it
 - [uv][uv], the package and project manager this project is built with
 
-There are [many ways to do install uv][uv-install] depending on your system setup and preferred package manager. If you're using macOS or Linux, the following command will generally work:
+There are [many ways to do install uv][uv-install] depending on your system setup and
+preferred package manager. If you're using macOS or Linux, the following command will
+generally work:
 
 ```shell
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -42,12 +47,14 @@ $ curl -LsSf https://astral.sh/uv/install.sh | sh
 > [!NOTE]
 > uv takes care of installing and running all the other tools used in this project. If
 > you'd like, you can choose to install some of them separately,
-> like [Ruff][ruff], [pre-commit][pre-commit], and [tox][tox], but you don't need to, as you can run all of these through uv.
+> like [Ruff][ruff], [pre-commit][pre-commit], and [tox][tox], but you don't need to, as
+> you can run all of these through uv.
 
 ## Contributing code
 
 At the core of any Python library is its code, and {{ cookiecutter.project_name }} is no
-different. Take a look at [existing issues][issues] to see if there's something you'd like to work on, or [open a new issue][issues-new] if you have another idea!
+different. Take a look at [existing issues][issues] to see if there's something you'd
+like to work on, or [open a new issue][issues-new] if you have another idea!
 
 ### Tooling overview
 
@@ -78,9 +85,12 @@ In general, don't worry too much about code style rules. Automation can take car
 most of the little things—if the tools listed above like your code, I probably do too.
 
 If you really must know what code should look like in this project, we generally follow
-the [Black style][black-style], as [implemented by Ruff][ruff-philosophy]. An exception is that we prefer single quotes (`''` rather than `""`), but this is also handled by our Ruff configuration. Let Ruff do its thing!
+the [Black style][black-style], as [implemented by Ruff][ruff-philosophy]. An exception
+is that we prefer single quotes (`''` rather than `""`), but this is also handled by our
+Ruff configuration. Let Ruff do its thing!
 
-For docstrings, [Google style][google-docstrings] is preferred. See existing documentation in the codebase for examples!
+For docstrings, [Google style][google-docstrings] is preferred. See existing
+documentation in the codebase for examples!
 
 Additionally, the [Zen of Python][pep-20] (PEP 20) by Tim Peters is recommended reading:
 > Beautiful is better than ugly.  
@@ -105,17 +115,19 @@ Additionally, the [Zen of Python][pep-20] (PEP 20) by Tim Peters is recommended 
 
 ### Code contribution process
 
-Follow the
-standard [fork-and-branch workflow][fork-branch] for an idea of how to contribute to this and other open-source projects. Generally, this involves a few steps:
+Follow the standard [fork-and-branch workflow][fork-branch] for an idea of how to
+contribute to this and other open-source projects. Generally, this involves a few steps:
 
-1. [Fork and clone][git-fork] the {{ cookiecutter.__gh_slug }} repository to make a copy you can edit. I also recommend making a new branch on your fork for your changes.
+1. [Fork and clone][git-fork] the {{ cookiecutter.__gh_slug }} repository to make a copy
+   you can edit. I also recommend making a new branch on your fork for your changes.
 2. Make your changes, testing along the way
    using [this project's tools](#tooling-overview).
 3. In most cases, you should add or edit unit tests that automatically check the
    functionality you're adding or changing. See existing test cases for examples, or ask
    for help when you submit your changes!
 4. [Commit][git-commit] your changes and [push][git-push] them to GitHub.
-5. [Create a pull request][git-pr] to propose that your changes be merged into the main repository.
+5. [Create a pull request][git-pr] to propose that your changes be merged into the main
+   repository.
 6. Wait for a review and respond to any comments or requested changes.
 7. Take a deep breath and pat yourself on the back. Once your pull request is approved
    and merged, I'll take care of the rest. Thank you for your contributions!
@@ -124,27 +136,49 @@ If you have any questions throughout the contribution process (or you don't hear
 within a few days after submitting a pull request), please email hello@bsoyka.me.
 
 [black-style]: https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html
+
 [conduct]: https://github.com/bsoyka/policy/blob/main/code-of-conduct.md
+
 [fork-branch]: https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+
 [git]: https://git-scm.com/
+
 [git-commit]: https://training.github.com/downloads/github-git-cheat-sheet/#make-changes
+
 [git-fork]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+
 [git-pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
 [git-push]: https://training.github.com/downloads/github-git-cheat-sheet/#synchronize-changes
+
 [github]: https://github.com/
+
 [google-docstrings]: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
 [mypy]: https://mypy-lang.org/
+
 [pep-20]: https://peps.python.org/pep-0020/
+
 [pre-commit]: https://pre-commit.com/
+
 [pytest]: https://docs.pytest.org/en/stable/
+
 [ruff]: https://docs.astral.sh/ruff/
+
 [ruff-philosophy]: https://docs.astral.sh/ruff/formatter/#philosophy
+
 [sponsor]: https://github.com/sponsors/bsoyka
+
 [thanks]: https://thanks.dev/home
+
 [thanks-me]: https://thanks.dev/u/gh/bsoyka
+
 [tox]: https://tox.wiki/en/latest/index.html
+
 [uv]: https://docs.astral.sh/uv/
+
 [uv-install]: https://docs.astral.sh/uv/getting-started/installation/
 
 [issues]: https://github.com/{{cookiecutter.__gh_slug}}/issues
+
 [issues-new]: https://github.com/{{cookiecutter.__gh_slug}}/issues/new
