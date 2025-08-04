@@ -36,7 +36,7 @@ lint:
 [group('contribute')]
 ruff: lint format
 
-# run tests (across all Python versions by default)
+# run tests (across all Python versions by default, runs in CI)
 [group('contribute')]
 test env='':
     #!/usr/bin/env bash
@@ -46,11 +46,11 @@ test env='':
         uv run tox -e {{env}}
     fi
 
-# run type checking with mypy
+# run type checking with mypy (runs in CI)
 [group('contribute')]
 typing: (test 'typing')
 
-# bump the version number
+# bump the version number (runs in CI)
 [group('maintain')]
 bump type:
     uv version --bump {{type}}

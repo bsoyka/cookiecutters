@@ -32,8 +32,11 @@ jobs:
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
           enable-cache: true
 
+      - name: Install just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
       - name: Run tests
-        run: uv run --locked tox run -e {% raw %}${{ format('py{0}', matrix.python) }}{% endraw %}
+        run: just test {% raw %}${{ format('py{0}', matrix.python) }}{% endraw %}
 
   coverage:
     name: Generate coverage report
@@ -88,8 +91,11 @@ jobs:
           python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
           enable-cache: true
 
+      - name: Install just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
       - name: Run mypy
-        run: uv run --locked tox run -e typing
+        run: just typing
 
   zizmor:
     name: Analyze GitHub Actions

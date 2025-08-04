@@ -33,12 +33,15 @@ jobs:
         with:
           enable-cache: true
 
+      - name: Install just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
       - name: Get current version
         id: old_version
         run: echo "old_version=$(uv version --short)" >> $GITHUB_ENV
 
       - name: Bump version
-        run: uv version --bump {% raw %}${{ github.event.inputs.bump-type }}{% endraw %}
+        run: just bump {% raw %}${{ github.event.inputs.bump-type }}{% endraw %}
 
       - name: Get new version
         id: new_version
