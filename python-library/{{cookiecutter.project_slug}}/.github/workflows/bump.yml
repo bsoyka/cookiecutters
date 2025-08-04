@@ -41,7 +41,9 @@ jobs:
         run: echo "old_version=$(uv version --short)" >> $GITHUB_ENV
 
       - name: Bump version
-        run: just bump {% raw %}${{ github.event.inputs.bump-type }}{% endraw %}
+        run: just bump ${BUMP_TYPE}
+        env:
+          BUMP_TYPE: "{% raw %}${{ github.event.inputs.bump-type }}{% endraw %}"
 
       - name: Get new version
         id: new_version
@@ -50,5 +52,5 @@ jobs:
       - name: Commit, tag, and push changes
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
-          message: {% raw %}"chore: bump ${{ env.old_version }} → ${{ env.new_version }}"{% endraw %}
-          tag: {% raw %}"v${{ env.new_version }}"{% endraw %}
+          message: "{% raw %}chore: bump ${{ env.old_version }} → ${{ env.new_version }}{% endraw %}"
+          tag: "{% raw %}v${{ env.new_version }}{% endraw %}"
