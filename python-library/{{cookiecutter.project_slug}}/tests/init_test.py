@@ -5,9 +5,9 @@ from pathlib import Path
 from {{cookiecutter.module_name}} import __version__
 
 try:
-    import tomllib  # type: ignore[import-not-found]
+    import tomllib
 except ModuleNotFoundError:
-    import tomli as tomllib
+    import tomli as tomllib  # type: ignore[no-redef]
 
 
 def test_version() -> None:
