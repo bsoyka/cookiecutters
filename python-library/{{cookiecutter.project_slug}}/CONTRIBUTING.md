@@ -138,9 +138,44 @@ contribute to this and other open-source projects. Generally, this involves a fe
 If you have any questions throughout the contribution process (or you don't hear from me
 within a few days after submitting a pull request), please email hello@bsoyka.me.
 
+## Contributing documentation
+
+Documentation is a key part of this project, and additions and improvements are always
+appreciated. We use [Sphinx][sphinx] with [reStructuredText (rST)][rst] for authoring
+documentation. If you’re new to Sphinx or reST, check out
+the [Sphinx rST Primer][rst-primer] for a quick introduction.
+
+To build the documentation locally, run:
+
+```shell
+uv run tox -e docs
+```
+
+or, if you have `just` installed:
+
+```shell
+just docs
+```
+
+This project aims to follow the [Diátaxis documentation framework][diataxis], which
+recognizes four distinct types of documentation:
+
+- **Tutorials**: Learning-oriented, step-by-step guides for newcomers.
+- **How-to guides**: Problem-oriented instructions for accomplishing specific tasks.
+- **Technical reference**: Information-oriented, detailed descriptions of APIs and
+  configuration.
+- **Explanation**: Understanding-oriented material that provides context, background,
+  and rationale.
+
+When contributing documentation, please consider which of these needs your addition
+addresses and structure your content accordingly. This helps keep the documentation
+clear, discoverable, and useful for everyone.
+
 [black-style]: https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html
 
 [conduct]: https://github.com/bsoyka/policy/blob/main/code-of-conduct.md
+
+[diataxis]: https://diataxis.fr/
 
 [fork-branch]: https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
 
@@ -170,9 +205,15 @@ within a few days after submitting a pull request), please email hello@bsoyka.me
 
 [pytest]: https://docs.pytest.org/en/stable/
 
+[rst]: https://docutils.sourceforge.io/rst.html
+
+[rst-primer]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+
 [ruff]: https://docs.astral.sh/ruff/
 
 [ruff-philosophy]: https://docs.astral.sh/ruff/formatter/#philosophy
+
+[sphinx]: https://www.sphinx-doc.org/
 
 [sponsor]: https://github.com/sponsors/bsoyka
 
