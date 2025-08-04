@@ -79,6 +79,9 @@ together later.
 | [mypy][mypy]             | Static type checking                                           | <ul><li>By itself: `uv run mypy .`</li> <li>Through tox: `uv run tox -e typing`</li></ul>                                                                                                                                                  |
 | [tox][tox]               | Testing automation across multiple Python virtual environments | *See instructions for each tool above.*                                                                                                                                                                                                    |
 
+Optionally, you can use [`just`][just] to run the commands listed above. [Install
+`just`][just-install], then run `just --list` to see available commands.
+
 ### Code style
 
 In general, don't worry too much about code style rules. Automation can take care of
@@ -154,6 +157,10 @@ within a few days after submitting a pull request), please email hello@bsoyka.me
 [github]: https://github.com/
 
 [google-docstrings]: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+
+[just]: https://just.systems/
+
+[just-install]: https://just.systems/man/en/packages.html
 
 [mypy]: https://mypy-lang.org/
 

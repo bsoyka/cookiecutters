@@ -1,0 +1,38 @@
+#!/usr/bin/env just --justfile
+
+@_default:
+    just --list
+
+# run all checks, tests, and type checks
+all: check test typing
+
+# run all pre-commit hooks, including Ruff
+check:
+    uv run tox -e style
+
+# format code with Ruff
+format:
+    uv run ruff format
+
+# set up pre-commit hooks
+install-hooks:
+    uv run pre-commit install
+
+# lint and auto-fix code with Ruff
+lint:
+    uv run ruff check --fix
+
+# run both linting and formatting with Ruff
+ruff: lint format
+
+# run tests across all Python versions
+test:
+    uv run tox
+
+# run type checking with mypy
+typing:
+    uv run tox -e typing
+
+# upgrade locked dependencies
+upgrade:
+    uv lock --upgrade
