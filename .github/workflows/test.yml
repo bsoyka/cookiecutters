@@ -52,4 +52,4 @@ jobs:
           inputs: |
             .
             python-library
-          persona: 'regular'
+          persona: 'auditor'
