@@ -4,35 +4,44 @@
     just --list
 
 # run all checks, tests, and type checks
+[group('contribute')]
 all: check test typing
 
 # run all pre-commit hooks, including Ruff
+[group('contribute')]
 check:
     uv run tox -e style
 
 # format code with Ruff
+[group('contribute')]
 format:
     uv run ruff format
 
 # set up pre-commit hooks
+[group('contribute')]
 install-hooks:
     uv run pre-commit install
 
 # lint and auto-fix code with Ruff
+[group('contribute')]
 lint:
     uv run ruff check --fix
 
 # run both linting and formatting with Ruff
+[group('contribute')]
 ruff: lint format
 
 # run tests across all Python versions
+[group('contribute')]
 test:
     uv run tox
 
 # run type checking with mypy
+[group('contribute')]
 typing:
     uv run tox -e typing
 
 # upgrade locked dependencies
+[group('maintain')]
 upgrade:
     uv lock --upgrade
