@@ -1,5 +1,7 @@
 #!/usr/bin/env just --justfile
 
+uv := require('uv')
+
 @_default:
     just --list
 
