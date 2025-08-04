@@ -9,8 +9,7 @@ all: check test typing
 
 # run all pre-commit hooks, including Ruff
 [group('contribute')]
-check:
-    uv run tox -e style
+check: (test 'style')
 
 # format code with Ruff
 [group('contribute')]
@@ -31,15 +30,19 @@ lint:
 [group('contribute')]
 ruff: lint format
 
-# run tests across all Python versions
+# run tests (across all Python versions by default)
 [group('contribute')]
-test:
-    uv run tox
+test env='':
+    #!/usr/bin/env bash
+    if [[ '{{env}}' == '' ]]; then
+        uv run tox
+    else
+        uv run tox -e {{env}}
+    fi
 
 # run type checking with mypy
 [group('contribute')]
-typing:
-    uv run tox -e typing
+typing: (test 'typing')
 
 # bump the version number
 [group('maintain')]
