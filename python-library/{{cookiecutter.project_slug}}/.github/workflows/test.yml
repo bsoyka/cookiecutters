@@ -1,4 +1,4 @@
-name: Test with pytest
+name: Tests
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Run tests with pytest
+    name: Run pytest
 
     runs-on: ubuntu-latest
 
@@ -64,7 +64,7 @@ jobs:
           token: {% raw %}${{ secrets.CODECOV_TOKEN }}{% endraw %}
 
   type:
-    name: Run type checks with mypy
+    name: Run type checks
 
     runs-on: ubuntu-latest
 
@@ -92,7 +92,7 @@ jobs:
         run: uv run --locked tox run -e typing
 
   zizmor:
-    name: Analyze GitHub Actions security with zizmor
+    name: Analyze GitHub Actions
 
     runs-on: ubuntu-latest
 

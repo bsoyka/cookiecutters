@@ -1,4 +1,4 @@
-name: Bump version
+name: Bumping
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
 
 jobs:
   bump:
-    name: Bump version
+    name: Version bump
 
     runs-on: ubuntu-latest
 
