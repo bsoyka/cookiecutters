@@ -8,15 +8,10 @@
 Result
 ```
 
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/{{cookiecutter.project_slug}})][pypi]
+[![Total Downloads](https://img.shields.io/pepy/dt/{{cookiecutter.project_slug}})][pypi]
 [![Supported Versions](https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}.svg)][pypi]
 [![Testing Status](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.__gh_slug}}/test.yml?branch=main&label=tests)][testing]
-[![License](https://img.shields.io/pypi/l/{{cookiecutter.project_slug}})][license]
-[![Version](https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}?label=latest)][pypi]
-
-[//]: # (TODO: Add Codecov token)
-[![Codecov](https://codecov.io/github/{{cookiecutter.__gh_slug}}/graph/badge.svg?token=)][codecov]
-[![GitHub Repo stars](https://img.shields.io/github/stars/bsoyka/{{cookiecutter.project_slug}})][github]
+[![Coverage](https://img.shields.io/codecov/c/github/{{cookiecutter.__gh_slug}})][codecov]
 
 ## Installation and usage
 

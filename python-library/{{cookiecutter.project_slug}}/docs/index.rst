@@ -7,11 +7,11 @@
 >>> {{cookiecutter.module_name}}.do_something()
 Result
 
-|PyPI - Downloads| |Supported Versions| |Testing Status| |License| |Version| |Codecov| |GitHub Repo stars|
+|Total Downloads| |Supported Versions| |Testing Status| |Coverage| |GitHub Repo stars|
 
-.. |PyPI - Downloads| image:: https://img.shields.io/pypi/dm/{{cookiecutter.project_slug}}
+.. |Total Downloads| image:: https://img.shields.io/pepy/dt/{{cookiecutter.project_slug}}
    :target: https://pypi.org/project/{{cookiecutter.project_slug}}/
-   :alt: PyPI - Downloads
+   :alt: Total Downloads
 
 .. |Supported Versions| image:: https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}.svg
    :target: https://pypi.org/project/{{cookiecutter.project_slug}}/
@@ -21,19 +21,9 @@ Result
    :target: https://github.com/{{cookiecutter.__gh_slug}}/actions/workflows/test.yml
    :alt: Testing Status
 
-.. |License| image:: https://img.shields.io/pypi/l/{{cookiecutter.project_slug}}
-   :target: https://github.com/{{cookiecutter.__gh_slug}}/blob/master/LICENSE
-   :alt: License
-
-.. |Version| image:: https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}?label=latest
-   :target: https://pypi.org/project/{{cookiecutter.project_slug}}/
-   :alt: Version
-
-.. TODO: Add Codecov token
-
-.. |Codecov| image:: https://codecov.io/github/{{cookiecutter.__gh_slug}}/graph/badge.svg?token=
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/{{cookiecutter.__gh_slug}}
    :target: https://codecov.io/github/{{cookiecutter.__gh_slug}}
-   :alt: Codecov
+   :alt: Coverage
 
 .. |GitHub Repo stars| image:: https://img.shields.io/github/stars/bsoyka/{{cookiecutter.project_slug}}
    :target: https://github.com/{{cookiecutter.__gh_slug}}
