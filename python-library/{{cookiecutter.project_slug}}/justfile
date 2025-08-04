@@ -11,6 +11,10 @@ all: check test typing
 [group('contribute')]
 check: (test 'style')
 
+# build documentation with Sphinx
+[group('contribute')]
+docs: (test 'docs')
+
 # format code with Ruff
 [group('contribute')]
 format:
@@ -49,7 +53,7 @@ typing: (test 'typing')
 bump type:
     uv version --bump {{type}}
 
-# upgrade locked dependencies
+# upgrade GitHub Actions, pre-commit hooks, and uv.lock
 [group('maintain')]
 upgrade:
-    uv lock --upgrade
+    uv run tox -m update
