@@ -57,9 +57,12 @@ jobs:
         with:
           enable-cache: true
 
+      - name: Install just
+        uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+
       - name: Run tests and generate coverage report
         run: |
-          uv run --locked pytest --cov={{ cookiecutter.module_name }} --cov-report=xml
+          just coverage
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3

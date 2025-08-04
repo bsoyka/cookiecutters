@@ -13,6 +13,11 @@ all: check test typing
 [group('contribute')]
 check: (test 'style')
 
+# generate coverage report
+[group('contribute')]
+coverage:
+    uv run pytest --cov={{ cookiecutter.module_name }} --cov-report=xml
+
 # build documentation with Sphinx
 [group('contribute')]
 docs: (test 'docs')
