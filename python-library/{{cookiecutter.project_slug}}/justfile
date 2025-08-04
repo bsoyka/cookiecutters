@@ -41,6 +41,11 @@ test:
 typing:
     uv run tox -e typing
 
+# bump the version number
+[group('maintain')]
+bump type:
+    uv version --bump {{type}}
+
 # upgrade locked dependencies
 [group('maintain')]
 upgrade:
