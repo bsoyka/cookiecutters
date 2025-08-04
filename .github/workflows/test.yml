@@ -1,4 +1,4 @@
-name: Test cookiecutter builds
+name: Tests
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test cookiecutter builds
+    name: Cookiecutter builds
 
     runs-on: ubuntu-latest
 
