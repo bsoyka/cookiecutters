@@ -4,6 +4,8 @@ on:
   release:
     types: [ published ]
 
+permissions: {}
+
 jobs:
   publish:
     name: Upload to PyPI
@@ -15,6 +17,7 @@ jobs:
       url: https://pypi.org/project/{{ cookiecutter.project_slug }}/
 
     permissions:
+      contents: read
       id-token: write
 
     steps:

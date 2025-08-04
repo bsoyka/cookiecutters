@@ -13,6 +13,8 @@ on:
         - minor
         - patch
 
+permissions: {}
+
 jobs:
   bump:
     name: Version bump
