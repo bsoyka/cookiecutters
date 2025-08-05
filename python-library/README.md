@@ -31,6 +31,8 @@ The following tools are used, configured, or implemented in projects generated f
 
 ## Generated tree
 
+<!-- Generated with `tree -a --dirsfirst --gitignore` -->
+
 ```text
 .
 ├── .github
