@@ -3,8 +3,8 @@
 {{cookiecutter.readme_oneliner}}
 
 ```python
->>> import {{cookiecutter.module_name}}
->>> {{cookiecutter.module_name}}.do_something()
+{% raw %}>>>{% endraw %} import {{cookiecutter.module_name}}
+{% raw %}>>>{% endraw %} {{cookiecutter.module_name}}.do_something()
 Result
 ```
 
@@ -16,7 +16,7 @@ Result
 
 ## Installation and usage
 
-{{cookiecutter.project_slug}} is [available on PyPI][pypi].
+{{cookiecutter.project_name}} is [available on PyPI][pypi].
 Install it with your preferred package manager:
 
 ```sh
@@ -24,7 +24,7 @@ $ uv add {{cookiecutter.project_slug}}
 $ pip install {{cookiecutter.project_slug}}
 ```
 
-{{cookiecutter.project_slug}} officially supports Python 3.9+.
+{{cookiecutter.project_name}} officially supports Python 3.9+.
 
 **[Read the documentation][docs]** to learn how to use {{cookiecutter.project_name}}.
 
