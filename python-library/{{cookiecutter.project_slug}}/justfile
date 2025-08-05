@@ -55,7 +55,7 @@ test env='':
 [group('contribute')]
 typing: (test 'typing')
 
-# bump the version number (runs in CI)
+# bump the version number
 [group('maintain')]
 bump type:
     uv version --bump {% raw %}{{type}}{% endraw %}
