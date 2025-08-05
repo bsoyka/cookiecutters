@@ -7,7 +7,7 @@
 >>> {{cookiecutter.module_name}}.do_something()
 Result
 
-|Total Downloads| |Supported Versions| |Testing Status| |Coverage| |GitHub Repo stars|
+|Total Downloads| |Supported Versions| |Testing Status| |Coverage| |GitHub last commit| |GitHub Repo stars|
 
 .. |Total Downloads| image:: https://img.shields.io/pepy/dt/{{cookiecutter.project_slug}}
    :target: https://pypi.org/project/{{cookiecutter.project_slug}}/
@@ -24,6 +24,10 @@ Result
 .. |Coverage| image:: https://img.shields.io/codecov/c/github/{{cookiecutter.__gh_slug}}
    :target: https://codecov.io/github/{{cookiecutter.__gh_slug}}
    :alt: Coverage
+
+.. |GitHub last commit| image:: https://img.shields.io/github/last-commit/{{cookiecutter.__gh_slug}}
+   :target: https://github.com/{{cookiecutter.__gh_slug}}
+   :alt: GitHub last commit
 
 .. |GitHub Repo stars| image:: https://img.shields.io/github/stars/bsoyka/{{cookiecutter.project_slug}}
    :target: https://github.com/{{cookiecutter.__gh_slug}}

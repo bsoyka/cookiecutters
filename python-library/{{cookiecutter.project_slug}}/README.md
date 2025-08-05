@@ -12,6 +12,7 @@ Result
 [![Supported Versions](https://img.shields.io/pypi/pyversions/{{cookiecutter.project_slug}}.svg)][pypi]
 [![Testing Status](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.__gh_slug}}/test.yml?branch=main&label=tests)][testing]
 [![Coverage](https://img.shields.io/codecov/c/github/{{cookiecutter.__gh_slug}})][codecov]
+[![GitHub last commit](https://img.shields.io/github/last-commit/{{cookiecutter.__gh_slug}})][github]
 
 ## Installation and usage
 
