@@ -45,10 +45,10 @@ ruff: lint format
 [group('contribute')]
 test env='':
     #!/usr/bin/env bash
-    if [[ '{{env}}' == '' ]]; then
+    if [[ '{% raw %}{{env}}{% endraw %}' == '' ]]; then
         uv run tox
     else
-        uv run tox -e {{env}}
+        uv run tox -e {% raw %}{{env}}{% endraw %}
     fi
 
 # run type checking with mypy (runs in CI)
@@ -58,7 +58,7 @@ typing: (test 'typing')
 # bump the version number (runs in CI)
 [group('maintain')]
 bump type:
-    uv version --bump {{type}}
+    uv version --bump {% raw %}{{type}}{% endraw %}
 
 # upgrade GitHub Actions, pre-commit hooks, and uv.lock
 [group('maintain')]
