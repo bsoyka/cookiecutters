@@ -36,7 +36,7 @@ Result
 Installation
 ------------
 
-{{cookiecutter.project_slug}} is `available on PyPI <https://pypi.org/project/{{cookiecutter.project_slug}}/>`_.
+{{cookiecutter.project_name}} is `available on PyPI <https://pypi.org/project/{{cookiecutter.project_slug}}/>`_.
 Install it with your preferred package manager:
 
 .. code-block:: shell
@@ -44,7 +44,7 @@ Install it with your preferred package manager:
     $ uv add {{cookiecutter.project_slug}}
     $ pip install {{cookiecutter.project_slug}}
 
-{{cookiecutter.project_slug}} officially supports Python 3.9+.
+{{cookiecutter.project_name}} officially supports Python 3.9+.
 
 API reference
 -------------
