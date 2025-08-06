@@ -44,7 +44,7 @@
 - name: 'area:packaging'
   color: 80cbc4
   description: 'Related to dependencies, package management, or versioning'
-  aliases: ['a: dependencies']
+  aliases: ['dependencies', 'a: dependencies']
 
 - name: 'area:documentation'
   color: 80cbc4
