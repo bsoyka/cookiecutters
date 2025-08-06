@@ -18,6 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          persist-credentials: false
           sparse-checkout: .github/labels.yml
 
       - uses: EndBug/label-sync@52074158190acb45f3077f9099fea818aa43f97a # v2.3.3
