@@ -18,6 +18,7 @@
 - name: 'type:chore'
   color: 1565c0
   description: 'Routine tasks or maintenance work'
+  aliases: ['t: style']
 
 - name: 'type:feature'
   color: 1565c0
@@ -38,7 +39,7 @@
 - name: 'area:CI/CD'
   color: 80cbc4
   description: 'Related to Continuous Integration or Continuous Deployment'
-  aliases: ['a: tools']
+  aliases: ['a: CI', 'a: tools']
 
 - name: 'area:packaging'
   color: 80cbc4
@@ -79,12 +80,12 @@
 - name: 'status:blocked'
   color: fdd835
   description: 'Waiting on some external factor'
-  aliases: ['s: waiting for author']
+  aliases: ['s: deferred', 's: question', 's: stalled', 's: waiting', 's: waiting for author']
 
 - name: 'status:duplicate'
   color: fff6d3
   description: 'An issue that has already been reported'
-  aliases: ['duplicate', 'm: duplicate']
+  aliases: ['duplicate', 'i: duplicate', 'm: duplicate']
 
 - name: 'status:invalid'
   color: fff6d3
@@ -104,4 +105,4 @@
 - name: 'status:wontfix'
   color: fff6d3
   description: 'Issue will not be fixed, or is not a priority'
-  aliases: ['wontfix']
+  aliases: ['wontfix', 's: declined']
