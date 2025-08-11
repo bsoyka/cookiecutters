@@ -1,0 +1,118 @@
+########## Globally recognized labels
+
+- name: 'help wanted'
+  color: eeeeee
+  description: 'Requesting assistance or input from the community'
+
+- name: 'good first issue'
+  color: eeeeee
+  description: 'A beginner-friendly issue suitable for new contributors'
+
+########## Issue types
+
+- name: 'type:bug'
+  color: 1565c0
+  description: 'A bug or unexpected behavior'
+  aliases: ['bug', 't: bug']
+
+- name: 'type:chore'
+  color: 1565c0
+  description: 'Routine tasks or maintenance work'
+  aliases: ['t: style']
+
+- name: 'type:feature'
+  color: 1565c0
+  description: 'A new feature or enhancement'
+  aliases: ['enhancement', 't: enhancement', 't: feature']
+
+- name: 'type:question'
+  color: 1565c0
+  description: 'A request for clarification or information'
+  aliases: ['question', 't: question']
+
+- name: 'type:security'
+  color: 1565c0
+  description: 'A security-related issue or vulnerability'
+
+########## Sections
+
+- name: 'section:meta'
+  color: e86978
+  description: 'Related to the cookiecutters project itself'
+
+- name: 'section:python-library'
+  color: e86978
+  description: 'Related to the Python library cookiecutter template'
+
+########## Areas of focus
+
+- name: 'area:CI/CD'
+  color: 80cbc4
+  description: 'Related to Continuous Integration or Continuous Deployment'
+  aliases: ['a: CI', 'a: tools']
+
+- name: 'area:packaging'
+  color: 80cbc4
+  description: 'Related to dependencies, package management, or versioning'
+  aliases: ['a: dependencies']
+
+- name: 'area:documentation'
+  color: 80cbc4
+  description: 'Related to documentation, guides, or manuals'
+  aliases: ['documentation', 'a: documentation']
+
+- name: 'area:testing'
+  color: 80cbc4
+  description: 'Related to testing, test cases, or test environments'
+  aliases: ['a: tests']
+
+########## Priority labels
+
+- name: 'priority:high'
+  color: f44336
+  description: 'High priority, needs immediate attention'
+
+- name: 'priority:medium'
+  color: fca635
+  description: 'Medium priority, should be addressed soon'
+
+- name: 'priority:low'
+  color: 81cc9b
+  description: 'Low priority, can be addressed later'
+
+########## Status labels
+
+- name: 'status:approved'
+  color: fff6d3
+  description: 'Valid, with all necessary information'
+  aliases: ['s: approved']
+
+- name: 'status:blocked'
+  color: fdd835
+  description: 'Waiting on some external factor'
+  aliases: ['s: deferred', 's: question', 's: stalled', 's: waiting', 's: waiting for author']
+
+- name: 'status:duplicate'
+  color: fff6d3
+  description: 'An issue that has already been reported'
+  aliases: ['duplicate', 'i: duplicate', 'm: duplicate']
+
+- name: 'status:invalid'
+  color: fff6d3
+  description: 'Not a valid issue, or not actionable'
+  aliases: ['invalid', 'm: invalid']
+
+- name: 'status:planning'
+  color: fdd835
+  description: 'Discussion or planning stage, not yet actionable'
+  aliases: ['s: planning']
+
+- name: 'status:wip'
+  color: fff6d3
+  description: 'Work is currently in progress on this issue'
+  aliases: ['s: WIP']
+
+- name: 'status:wontfix'
+  color: fff6d3
+  description: 'Issue will not be fixed, or is not a priority'
+  aliases: ['wontfix', 's: declined']
